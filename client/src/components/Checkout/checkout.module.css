@@ -1,0 +1,85 @@
+.checkout {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+
+  background-color: #f8f9fa;
+}
+
+.container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.leftSideContainer {
+  padding: 0.5rem;
+  border: 1px silver solid;
+  border-radius: 2px;
+
+  display: flex;
+  gap: 1rem;
+}
+
+.leftSideItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.coupon {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.itemsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.item > img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.rightSide {
+  padding: 0.5rem;
+  border: 1px silver solid;
+  border-radius: 2px;
+
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summaryItem > span:last-child {
+  font-weight: bold;
+  border-bottom: 1px silver solid;
+}

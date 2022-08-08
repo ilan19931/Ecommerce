@@ -1,0 +1,21 @@
+1. do ProductPage
+
+2. do coupon feature in Checkout page
+
+3. do Place Order in Checkout page
+
+4. do add to wish list feature in Home page
+
+5. do filters (like by categories) in Home page
+
+
+
+
+
+
+
+
+=========== KNOWN BUGS ===========
+1. when refreshing page - auth failed. returning to home page
+
+2. 

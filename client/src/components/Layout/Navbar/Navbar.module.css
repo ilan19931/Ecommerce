@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5c7cfa;
+  padding: 0.5rem;
+}
+
+.leftSide {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.email {
+  color: whitesmoke;
+  font-size: 1.4rem;
+}
+
+.rightSide {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}

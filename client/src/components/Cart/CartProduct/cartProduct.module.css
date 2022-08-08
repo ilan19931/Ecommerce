@@ -1,0 +1,8 @@
+.cartProduct {
+  display: grid;
+  grid-template-columns: 2fr repeat(5, 1fr);
+
+  border-bottom: 1px silver solid;
+  padding: 0.6rem;
+  text-align: center;
+}
