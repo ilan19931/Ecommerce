@@ -2,9 +2,13 @@ import React from "react";
 
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./components/Home/Home";
-import Login from "./components/Login/Login";
-import Register from "./components/Register/Register";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+import Checkout from "./pages/Checkout/Checkout";
+import ProductPage from "./pages/ProductPage/ProductPage";
+import Cart from "./pages/Cart/Cart";
+import Profile from "./pages/Profile/Profile";
 import Layout from "./components/Layout/Layout";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -16,14 +20,12 @@ import { useEffect } from "react";
 
 import styles from "./App.module.css";
 import { loadCart } from "./redux/actions/cart.actions";
-import Cart from "./components/Cart/Cart";
-import Profile from "./components/Profile/Profile";
+
 import PrivateRoute from "./components/Layout/Routes/PrivateRoute";
 import GuestRoute from "./components/Layout/Routes/GuestRoute";
 import { loadProfile } from "./redux/actions/profile.actions";
 import { doLoadCategories } from "./redux/actions/category.actions";
-import Checkout from "./components/Checkout/Checkout";
-import ProductPage from "./components/ProductPage/ProductPage";
+import { doLoadProducts } from "./redux/actions/product.actions";
 
 const App = () => {
   const alerts = useSelector((state) => state.ui.alerts);
@@ -33,6 +35,7 @@ const App = () => {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
+    doLoadProducts(dispatch);
     doLoadCategories(dispatch);
   }, [dispatch]);
 

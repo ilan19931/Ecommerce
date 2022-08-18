@@ -16,6 +16,7 @@ const Checkout = () => {
   const shippingPrice = 15;
   let totalItems = 0;
   let totalPrice = 0;
+  let discount = 1;
 
   cart.products.forEach((product) => {
     totalItems += product.count;

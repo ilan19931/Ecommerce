@@ -16,6 +16,22 @@ async function getAllProducts(req, res) {
   }
 }
 
+// @route   GET api/product/:productId
+// @desc    get product by id
+// @access  Public
+async function getProductById(req, res) {
+  try {
+    const productId = req.params.productId;
+
+    const productFound = await Product.findById(productId);
+
+    res.send(productFound);
+  } catch (err) {
+    console.log(err);
+    return res.status(401).send({ errors: [{ msg: "Product Not Found." }] });
+  }
+}
+
 // @route   POST api/product/
 // @desc    get all shop products
 // @access  Private Admin
@@ -95,4 +111,4 @@ async function deleteProduct(req, res) {
   }
 }
 
-module.exports = { getAllProducts, addProduct, updateProduct, deleteProduct };
+module.exports = { getAllProducts, getProductById, addProduct, updateProduct, deleteProduct };

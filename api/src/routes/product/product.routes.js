@@ -1,6 +1,12 @@
 const { check } = require("express-validator");
 const { userMiddleware, ad, adminMiddleware } = require("../../middlewares/auth.middlewares");
-const { getAllProducts, addProduct, updateProduct, deleteProduct } = require("./product.actions");
+const {
+  getAllProducts,
+  addProduct,
+  updateProduct,
+  deleteProduct,
+  getProductById,
+} = require("./product.actions");
 
 const router = require("express").Router();
 
@@ -8,6 +14,11 @@ const router = require("express").Router();
 // @desc    get all shop products
 // @access  Public
 router.get("/", (req, res) => getAllProducts(req, res));
+
+// @route   GET api/product/:productId
+// @desc    get product by id
+// @access  Public
+router.get("/:productId", (req, res) => getProductById(req, res));
 
 // @route   POST api/product/
 // @desc    get all shop products

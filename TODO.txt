@@ -18,4 +18,4 @@
 =========== KNOWN BUGS ===========
 1. when refreshing page - auth failed. returning to home page
 
-2. 
+2. redux doesn't load in other pages. like ProductPage, after refreshing the page - there are no data in redux store

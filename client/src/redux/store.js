@@ -13,7 +13,7 @@ export default configureStore({
   reducer: {
     auth: authReducer,
     ui: uiReducer,
-    product: productReducer,
+    products: productReducer,
     cart: cartReducer,
     profile: profileReducer,
     categories: categoriesReducer,

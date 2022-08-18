@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./Home.module.css";
 import HomeMain from "./HomeMain/HomeMain";
-import Sidebar from "./Sidebar/Sidebar";
+import Sidebar from "./../../components/Sidebar/Sidebar";
 
 const Home = () => {
   return (

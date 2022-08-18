@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import styles from "./Navbar.module.css";
 import { useEffect } from "react";
+import Spinner from "./../Spinner/Spinner";
 
 import { logout } from "../../../redux/actions/auth.actions";
 
@@ -19,7 +20,9 @@ const Navbar = () => {
 
   cartProducts.map((product) => (cartProductsCnt += product.count));
 
-  return (
+  return cartProducts.isLoading ? (
+    <Spinner />
+  ) : (
     <div className={styles.navbar}>
       <div className={styles.leftSide}>
         <Link to="/">Ecommerce App</Link>

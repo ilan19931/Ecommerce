@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import AllProducts from "../../products/AllProducts/AllProducts";
+import AllProducts from "../../../components/products/AllProducts/AllProducts";
 
 import styles from "./HomeMain.module.css";
 

@@ -9,13 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Spinner from "../../Layout/Spinner/Spinner";
 
 const AllProducts = ({ layoutNum }) => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    getAllProducts(dispatch);
-  }, [dispatch]);
-
-  const productsData = useSelector((state) => state.product);
+  const productsData = useSelector((state) => state.products);
 
   return (
     <div className={layoutNum === 3 ? styles.AllProducts : styles["AllProducts-4-cols"]}>
